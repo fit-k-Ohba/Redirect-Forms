@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const id = getQueryParam('id');
     if (id !== null) {
         let dest = null;
-        if (id === '1') dest = 'https://www.google.com';
-        else if (id === '2') dest = 'https://www.youtube.com';
+        if (id === '1') dest = 'https://forms.office.com/r/xh252QYDdm'; //オレンジ
+        else if (id === '2') dest = 'https://forms.office.com/r/V4s7NNgZCC'; //多目的室
 
         if (dest) {
             // 履歴を残さないように replace を使用
