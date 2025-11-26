@@ -12,46 +12,6 @@
     <pre id="params" style="background:#f6f8fa;padding:8px;border-radius:4px;
     max-width:640px;overflow:auto"></pre>
 
-    <script>
-    // クエリパラメータをオブジェクトで返す
-    function getQueryParams() {
-        return Object.fromEntries(new URLSearchParams(window.location.search).entries());
-    }
-
-    // 個別のパラメータを取得（存在しなければdefaultValue）
-    function getQueryParam(name, defaultValue = null) {
-        const p = new URLSearchParams(window.location.search);
-        return p.has(name) ? p.get(name) : defaultValue;
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const urlSpan = document.getElementById('urlparam');
-        const paramsPre = document.getElementById('params');
-        urlSpan.textContent = window.location.href;
-        const params = getQueryParams();
-        paramsPre.textContent = JSON.stringify(params, null, 2);
-
-        // id によるリダイレクト処理
-        const id = getQueryParam('id');
-        if (id !== null) {
-            let dest = null;
-            if (id === '1') dest = 'https://www.google.com';
-            else if (id === '2') dest = 'https://www.youtube.com';
-
-            if (dest) {
-                // ユーザーに短いメッセージを表示してからリダイレクト（すぐ移動したければここを省略）
-                const note = document.createElement('div');
-                note.textContent = '指定された id により ' + dest + ' へリダイレクトします...';
-                note.style.marginTop = '12px';
-                note.style.fontWeight = '600';
-                document.body.appendChild(note);
-
-                // 履歴を残さないように replace を使用
-                window.location.replace(dest);
-                return;
-            }
-        }
-    });
-    </script>
+    <script src="form.js"></script>
 </body>
 </html>
