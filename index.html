@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>オレンジの部屋借用申請</title>
     <script>
-        window.location.replace("https://www.google.com");
+        var url = location.href;
+        document.getElementById("urlparam").innerText = url;
+        console.log(url);
     </script>
 </head>
 </html>
