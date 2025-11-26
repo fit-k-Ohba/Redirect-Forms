@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>オレンジの部屋借用申請</title>
-    <script>
-        var url = location.href;
-        document.getElementById("urlparam").innerText = url;
-    </script>
+    <!-- URL表示とクエリ取得は DOM の読み込み後に実行します -->
 </head>
 <body>
     <div class="test-area">URL : <span id="urlparam"></span></div>
+    <h3>クエリパラメータ</h3>
+    <pre id="params" style="background:#f6f8fa;padding:8px;border-radius:4px;
+    max-width:640px;overflow:auto"></pre>
+
+    <script>
+    // クエリパラメータをオブジェクトで返す
+    function getQueryParams() {
+        return Object.fromEntries(new URLSearchParams(window.location.search).entries());
+    }
+
+    // 個別のパラメータを取得（存在しなければdefaultValue）
+    function getQueryParam(name, defaultValue = null) {
+        const p = new URLSearchParams(window.location.search);
+        return p.has(name) ? p.get(name) : defaultValue;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('urlparam').textContent = window.location.href;
+        const params = getQueryParams();
+        document.getElementById('params').textContent = JSON.stringify(params, null, 2);
+    });
+    </script>
 </body>
 </html>
