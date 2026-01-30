@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let dest = null;
         if (id === '1') dest = 'https://forms.office.com/r/xh252QYDdm'; //オレンジ
         else if (id === '2') dest = 'https://forms.office.com/r/V4s7NNgZCC'; //多目的室
-        else if (id === '3') dest ='https://calendar.google.com/calendar/u/0/embed?height=600&wkst=1&ctz=Asia/Tokyo&showTabs=0&showPrint=0&showTz=0&showTitle=0&title=%E4%BA%88%E7%B4%84%E7%8A%B6%E6%B3%81&src=Y18xODg4ZjBkNGV1bGVnajd2Z3FhYmlnbzJqOGxxZ0ByZXNvdXJjZS5jYWxlbmRhci5nb29nbGUuY29t&src=Y18xODhibXBsYXFvdjIwaHZvbDdzNGRkOXF0dGdydUByZXNvdXJjZS5jYWxlbmRhci5nb29nbGUuY29t&color=%23f4511e&color=%238e24aa'; //予約状況
+        else if (id === '3') dest = 'https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia/Tokyo&showTabs=0&showPrint=0&showTz=0&showTitle=0&title=%E4%BA%88%E7%B4%84%E7%8A%B6%E6%B3%81&src=Y18xODg4ZjBkNGV1bGVnajd2Z3FhYmlnbzJqOGxxZ0ByZXNvdXJjZS5jYWxlbmRhci5nb29nbGUuY29t&src=Y18xODhibXBsYXFvdjIwaHZvbDdzNGRkOXF0dGdydUByZXNvdXJjZS5jYWxlbmRhci5nb29nbGUuY29t&color=%23f4511e&color=%238e24aa'; //予約状況
 
         if (dest) {
             // 履歴を残さないように replace を使用
